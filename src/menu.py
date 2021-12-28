@@ -1,5 +1,5 @@
 from src.database import cria_entrada
-from src.grafico import cria_grafico_mes_corrente, cria_grafico_ultimos_tres_meses
+from src.grafico import cria_grafico_mes_corrente, cria_grafico_ultimos_tres_meses, grafico_agregado
 
 
 def menu_grafico():
@@ -34,8 +34,10 @@ def menu():
     match escolha:
         case "1":
             cria_entrada("Luz")
+            menu()
         case "2":
             cria_entrada("Agua")
+            menu()
         case "3":
             menu_grafico()
         case "4":
